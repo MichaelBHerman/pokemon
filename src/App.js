@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import Card from './components/Card';
 import { getPokemon, getAllPokemon } from './services/pokemon';
 import './App.css';
+import sample from './components/images/pokeballBG.mp4'
+
 
 function App() {
   const [pokemonData, setPokemonData] = useState([])
@@ -53,6 +55,9 @@ function App() {
     <>
       <Navbar />
       <div>
+      <video id='background-video' autoPlay loop muted>
+      <source src={sample} type='video/mp4'/>
+      </video>
         {loading ? <h1 style={{ textAlign: 'center' }}>Loading...</h1> : (
           <>
             <div className="btn">
