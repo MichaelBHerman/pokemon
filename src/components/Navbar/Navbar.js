@@ -1,10 +1,12 @@
 import React from 'react';
 import './style.css';
+import navlogo from '../images/pokedex.png'
 
 function Navbar() {
     return (
         <div className="Navbar">
-            Pokemon API
+            <img src={navlogo} className='Navlogo'/>
+            
         </div>
     );
 }
