@@ -4,6 +4,7 @@ import Card from './components/Card';
 import { getPokemon, getAllPokemon } from './services/pokemon';
 import './App.css';
 import sample from './components/images/pokeballBG.mp4'
+import PokemonDisplay from './components/PokemonDisplay';
 
 
 function App() {
@@ -54,28 +55,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <div>
-      <video id='background-video' autoPlay loop muted>
-      <source src={sample} type='video/mp4'/>
-      </video>
-        {loading ? <h1 style={{ textAlign: 'center' }}>Loading...</h1> : (
-          <>
-            <div className="btn">
-              <button onClick={prev}>Prev</button>
-              <button onClick={next}>Next</button>
-            </div>
-            <div className="grid-container">
-              {pokemonData.map((pokemon, i) => {
-                return <Card key={i} pokemon={pokemon} />
-              })}
-            </div>
-            <div className="btn">
-              <button onClick={prev}>Prev</button>
-              <button onClick={next}>Next</button>
-            </div>
-          </>
-        )}
-      </div>
+      <PokemonDisplay />
+     
     </>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 import navlogo from '../images/pokedex.png';
-import pikachu from '../images/pikachu.gif';
+
 import jigglypuff from "../images/jigglypuff.gif";
-import red from '../images/red.mp4';
+
 
 function Navbar() {
     return (
